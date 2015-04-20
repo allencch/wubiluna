@@ -1,0 +1,123 @@
+# Rime schema settings
+# encoding: utf-8
+
+schema:
+  schema_id: wubiluna
+  name: "五笔朙月"
+  version: "2"
+  author:
+    - Allen Choong
+  description: |
+    五筆字型86版修正中国字，加入emoticons。2.0 改编自仓颉检字法（Cangjie6）
+  dependencies:
+    - luna_pinyin_simp
+
+switches:
+  - name: ascii_mode
+    reset: 0
+    states: [ 中文, 西文 ]
+  - name: full_shape
+    states: [ 半角, 全角 ]
+  - name: ascii_punct
+    states: [ 。， ,  ．， ]
+  - name: zh_simp
+    reset: 1
+    states: [ 漢字, 汉字 ]
+
+    
+engine:
+  processors:
+    - ascii_composer
+    - recognizer
+    - key_binder
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+  segmentors:
+    - ascii_segmentor
+    - matcher
+    - abc_segmentor
+    - affix_segmentor@pinyin
+    - affix_segmentor@reverse_lookup
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+    - punct_translator
+    - table_translator
+    - script_translator@pinyin
+    - script_translator@reverse_lookup
+  filters:
+    - simplifier #So that by default, simplified pinyin is used
+    - uniquifier
+    - reverse_lookup_filter@pinyin_reverse_lookup
+  
+simplifier: #based on luna_pinyin_simp
+  option_name: zh_simp
+
+
+speller:
+  alphabet: zyxwvutsrqponmlkjihgfedcba
+  delimiter: " '"
+
+translator: #Based on Cangjie6, wubi86, and wubi_pinyin
+  dictionary: &dict
+    wubiluna
+  enable_user_dict: true
+  enable_charset_filter: false #added to allows all words
+  enable_sentence: true
+  sentence_over_completion: true
+  enable_encoder: true
+  encode_commit_history: true
+  max_phrase_length: 4
+  initial_quality: 0.75	
+
+pinyin: #Based on Cangjie6 and luna_pinyin_simp
+  tag: pinyin
+  dictionary: luna_pinyin
+  prism: luna_pinyin_simp
+  prefix: "P" 
+  suffix: ;
+  preedit_format: &pinyin
+    - xform/([nl])v/$1ü/
+    - xform/([nl])ue/$1üe/
+    - xform/([jqxy])v/$1u/
+  tips: 【拼音】
+  closing_tips: 【五笔】
+  initial_quality: 0.2	
+
+abc_segmentor:
+  extra_tags: [pinyin ]
+
+reverse_lookup: #Based on Cangjie6, merge with pinyin_lookup, since there is only one reverse lookup
+  tag: reverse_lookup
+  prefix: "`"
+  suffix: ;
+  tips: 【反查】
+  closing_tips: 【五笔】
+  dictionary: pinyin_simp #Based on wubi86 reverse lookup, so that will have simplified and traditional characters
+  preedit_format: *pinyin
+  initial_quality: 1
+  
+
+pinyin_reverse_lookup: #To show the wubi code, based on Cangjie6
+  tags: [ reverse_lookup ]
+  dictionary: *dict
+  overwrite_comment: true 
+  
+
+punctuator: #based on Cangjie6
+  import_preset: symbols
+
+key_binder: #based on luna_pinyin_simp
+  import_preset: default
+  bindings:
+    - { when: always, accept: Control+Shift+4, toggle: zh_simp }
+    - { when: always, accept: Control+Shift+dollar, toggle: zh_simp }
+
+recognizer: #based on Cangjie6
+  import_preset: default
+  patterns:
+    reverse_lookup: "`[a-z]*;?$"
+    pinyin: (?<!`)P[a-z']*;?$
