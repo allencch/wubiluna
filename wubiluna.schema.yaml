@@ -121,3 +121,4 @@ recognizer: #based on Cangjie6
   patterns:
     reverse_lookup: "`[a-z]*;?$"
     pinyin: (?<!`)P[a-z']*;?$
+    punct: "^/[a-z]*$"
