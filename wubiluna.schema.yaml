@@ -4,13 +4,15 @@
 schema:
   schema_id: wubiluna
   name: "五笔朙月"
-  version: "2"
+  version: "3"
   author:
     - Allen Choong
   description: |
     五筆字型86版修正中国字，加入emoticons。2.0 改编自仓颉检字法（Cangjie6）
   dependencies:
     - luna_pinyin_simp
+    - terra_pinyin
+    - wubi86
 
 switches:
   - name: ascii_mode
@@ -40,17 +42,20 @@ engine:
     - matcher
     - abc_segmentor
     - affix_segmentor@pinyin
-    - affix_segmentor@reverse_lookup
+    - affix_segmentor@pinyin_lookup
+    - affix_segmentor@reverse_lookup #cannot change to other name like wubi_lookup, don't know why
     - punct_segmentor
     - fallback_segmentor
   translators:
     - punct_translator
     - table_translator
     - script_translator@pinyin
+    - script_translator@pinyin_lookup
     - script_translator@reverse_lookup
   filters:
     - simplifier #So that by default, simplified pinyin is used
     - uniquifier
+    - reverse_lookup_filter@wubi_reverse_lookup
     - reverse_lookup_filter@pinyin_reverse_lookup
   
 simplifier: #based on luna_pinyin_simp
@@ -94,17 +99,33 @@ reverse_lookup: #Based on Cangjie6, merge with pinyin_lookup, since there is onl
   tag: reverse_lookup
   prefix: "`"
   suffix: ;
-  tips: 【反查】
+  tips: 【拼音反查】
   closing_tips: 【五笔】
   dictionary: pinyin_simp #Based on wubi86 reverse lookup, so that will have simplified and traditional characters
   preedit_format: *pinyin
   initial_quality: 1
+  #do not use extra tags, else it will overwrite the terra_pinyin code with wubi86
+  
+  
+pinyin_lookup:
+  tag: pinyin_lookup
+  prefix: "`W" #don't know why must start from `, cannot start from W only
+  suffix: ;
+  dictionary: wubiluna
+  tips: 【五笔反查】
+  closing_tips: 【五笔】
+  initial_quality: 1
   
 
+wubi_reverse_lookup: #To show pinyin from wubi
+  tags: [ pinyin_lookup ]
+  dictionary: terra_pinyin
+  overwrite_comment: true 
+  
 pinyin_reverse_lookup: #To show the wubi code, based on Cangjie6
   tags: [ reverse_lookup ]
   dictionary: *dict
-  overwrite_comment: true 
+  overwrite_comment: true
   
 
 punctuator: #based on Cangjie6
@@ -120,5 +141,6 @@ recognizer: #based on Cangjie6
   import_preset: default
   patterns:
     reverse_lookup: "`[a-z]*;?$"
-    pinyin: (?<!`)P[a-z']*;?$
+    pinyin_lookup: "`W[a-z]*;?$"
+    pinyin: (?<!`)P[a-z']*;?$ #cannot use number to select the phrase, have to use cursor
     punct: "^/[a-z]*$"
