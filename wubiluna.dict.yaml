@@ -42,41 +42,49 @@ encoder:
 ...
 
 々	qyi	0
-😁	smile	0
-😀	smile	0
-😃	smile	0
-😄	smile	0
-😆	smile	0
-😂	cry	0
-😢	cry	0
-😅	cry	0
-😭	cry	0
-😢	cry	0
-😦	fright	0
-😧	fright	0
-😨	fright	0
-😬	fright	0
-😭	fright	0
-😮	fright	0
-😱	fright	0
-😲	fright	0
-😛	naught	0
-😜	naught	0
-😝	naught	0
-😋	naught	0
-😏	naught	0
-😐	wunai	0
-😑	wunai	0
-😒	wunai	0
-😓	wunai	0
-😔	wunai	0
-😕	wunai	0
-😡	angry	0
-😤	angry	0
-😠	angry	0
-😖	wunai	0
-🗸	tick	0
-👍	like	0
-👌	okay	0
+# 😁	smile	0
+# 😀	smile	0
+# 😃	smile	0
+# 😄	smile	0
+# 😆	smile	0
+# 😂	cry	0
+# 😢	cry	0
+# 😅	cry	0
+# 😭	cry	0
+# 😢	cry	0
+# 😦	fright	0
+# 😧	fright	0
+# 😨	fright	0
+# 😬	fright	0
+# 😭	fright	0
+# 😮	fright	0
+# 😱	fright	0
+# 😲	fright	0
+# 😛	naught	0
+# 😜	naught	0
+# 😝	naught	0
+# 😋	naught	0
+# 😏	naught	0
+# 😐	wunai	0
+# 😑	wunai	0
+# 😒	wunai	0
+# 😓	wunai	0
+# 😔	wunai	0
+# 😕	wunai	0
+# 😡	angry	0
+# 😤	angry	0
+# 😠	angry	0
+# 😖	wunai	0
+# 🗸	tick	0
+# 👍	like	0
+# 👌	okay	0
 の	no	0
-🌣	sunny	0
+# 🌣	sunny	0
+μ	mu	0
+σ	sigma	0
+√	sqrt	0
+≈	approx	0
+≥	daguo	0
+≤	xiaoguo	0
+×	times	0
+÷	divides	0
