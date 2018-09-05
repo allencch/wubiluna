@@ -10,7 +10,7 @@ schema:
   description: |
     五筆字型86版修正中国字，加入emoticons。2.0 改编自仓颉检字法（Cangjie6）
   dependencies:
-    - luna_pinyin_simp
+    - luna_pinyin
     - terra_pinyin
     - wubi86
     - stroke
@@ -64,7 +64,6 @@ engine:
     - script_translator@reverse_lookup
   filters:
     - simplifier@zh_simp # So that by default, simplified pinyin is used
-    - simplifier@zh_trad # Traditional
     - simplifier@zh_tw # Traditional based on Taiwan
     - uniquifier
     - reverse_lookup_filter@wubi_reverse_lookup
@@ -79,11 +78,6 @@ zh_tw:
   tag: zh_tw
   option_name: zh_tw
   opencc_config: t2tw.json
-
-zh_trad:
-  tag: zh_trad
-  option_name: zh_trad
-  opencc_config: s2t.json
 
 speller:
   alphabet: zyxwvutsrqponmlkjihgfedcba
@@ -108,7 +102,6 @@ pinyin: # Based on Cangjie6 and luna_pinyin_simp
   tips: 【拼音】
   closing_tips: 【五笔】
   dictionary: luna_pinyin
-  prism: luna_pinyin_simp
   preedit_format: &pinyin
     - xform/([nl])v/$1ü/
     - xform/([nl])ue/$1üe/
