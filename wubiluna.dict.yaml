@@ -19,9 +19,9 @@
 
 ---
 name: wubiluna
-version: "1"
+version: "1.1"
 sort: by_weight
-use_preset_vocabulary: false
+use_preset_vocabulary: true
 import_tables:
   - wubi86
 columns:

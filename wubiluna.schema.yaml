@@ -4,7 +4,7 @@
 schema:
   schema_id: wubiluna
   name: "五笔朙月"
-  version: "4"
+  version: "5"
   author:
     - Allen Choong
   description: |
@@ -24,10 +24,12 @@ switches:
     states: [ 半角, 全角 ]
   - name: ascii_punct
     states: [ 。， ,  ．， ]
-  - name: zh_simp
-    reset: 1
-    states: [ 漢字, 汉字 ]
-
+  - options: [ zh_simp, zh_tw, zh_trad ]
+    reset: 0
+    states:
+      - 字型 → 汉字
+      - 字型 → 漢字（臺）
+      - 字型 → 漢字
 
 engine:
   processors:
@@ -48,7 +50,7 @@ engine:
     - affix_segmentor@pinyin_lookup
     - affix_segmentor@stroke_lookup
     - affix_segmentor@stroke_reverse_lookup
-    - affix_segmentor@reverse_lookup #cannot change to other name like wubi_lookup, don't know why
+    - affix_segmentor@reverse_lookup # cannot change to other name like wubi_lookup, don't know why
     - punct_segmentor
     - fallback_segmentor
   translators:
@@ -61,25 +63,37 @@ engine:
     - script_translator@stroke_reverse_lookup
     - script_translator@reverse_lookup
   filters:
-    - simplifier #So that by default, simplified pinyin is used
+    - simplifier@zh_simp # So that by default, simplified pinyin is used
+    - simplifier@zh_trad # Traditional
+    - simplifier@zh_tw # Traditional based on Taiwan
     - uniquifier
     - reverse_lookup_filter@wubi_reverse_lookup
     - reverse_lookup_filter@pinyin_reverse_lookup
     - reverse_lookup_filter@stroke_reverse_lookup
 
-simplifier: #based on luna_pinyin_simp
+zh_simp: # based on luna_pinyin_simp
+  tag: zh_simp
   option_name: zh_simp
 
+zh_tw:
+  tag: zh_tw
+  option_name: zh_tw
+  opencc_config: t2tw.json
+
+zh_trad:
+  tag: zh_trad
+  option_name: zh_trad
+  opencc_config: s2t.json
 
 speller:
   alphabet: zyxwvutsrqponmlkjihgfedcba
   delimiter: " '"
 
-translator: #Based on Cangjie6, wubi86, and wubi_pinyin
+translator: # Based on Cangjie6, wubi86, and wubi_pinyin
   dictionary: &dict
     wubiluna
   enable_user_dict: true
-  enable_charset_filter: false #added to allows all words
+  enable_charset_filter: false # added to allows all words
   enable_sentence: true
   sentence_over_completion: true
   enable_encoder: true
@@ -87,7 +101,7 @@ translator: #Based on Cangjie6, wubi86, and wubi_pinyin
   max_phrase_length: 4
   initial_quality: 0.75
 
-pinyin: #Based on Cangjie6 and luna_pinyin_simp
+pinyin: # Based on Cangjie6 and luna_pinyin_simp
   tag: pinyin
   prefix: "~"
   suffix: ;
@@ -100,9 +114,9 @@ pinyin: #Based on Cangjie6 and luna_pinyin_simp
     - xform/([nl])ue/$1üe/
     - xform/([jqxy])v/$1u/
   initial_quality: 0.2
-#  user_dict: wubiluna #so that pinyin also share the same dictionary
+#  user_dict: wubiluna # so that pinyin also share the same dictionary
 
-emoji: #Based on emoji
+emoji: # Based on emoji
   tag: emoji
   dictionary: emoji
   spelling_hints: 1
@@ -116,46 +130,43 @@ emoji: #Based on emoji
 abc_segmentor:
   extra_tags: [pinyin, emoji]
 
-reverse_lookup: #Based on Cangjie6, merge with pinyin_lookup, since there is only one reverse lookup
+reverse_lookup: # Based on Cangjie6, merge with pinyin_lookup, since there is only one reverse lookup
   tag: reverse_lookup
   prefix: "`"
   suffix: ;
   tips: 【拼音反查】
   closing_tips: 【五笔】
-  dictionary: pinyin_simp #Based on wubi86 reverse lookup, so that will have simplified and traditional characters
+  dictionary: pinyin_simp # Based on wubi86 reverse lookup, so that will have simplified and traditional characters
   preedit_format: *pinyin
   initial_quality: 1
-  #do not use extra tags, else it will overwrite the terra_pinyin code with wubi86
-
+  # do not use extra tags, else it will overwrite the terra_pinyin code with wubi86
 
 pinyin_lookup:
   tag: pinyin_lookup
-  prefix: "`W" #don't know why must start from `, cannot start from W only
+  prefix: "`W" # don't know why must start from `, cannot start from W only
   suffix: ;
   dictionary: wubiluna
   tips: 【五笔反查】
   closing_tips: 【五笔】
   initial_quality: 1
 
-
-wubi_reverse_lookup: #To show pinyin from wubi
+wubi_reverse_lookup: # To show pinyin from wubi
   tags: [ pinyin_lookup ]
   dictionary: terra_pinyin
   overwrite_comment: true
 
-pinyin_reverse_lookup: #To show the wubi code, based on Cangjie6
+pinyin_reverse_lookup: # To show the wubi code, based on Cangjie6
   tags: [ reverse_lookup ]
   dictionary: *dict
   overwrite_comment: true
 
-
-stroke_lookup: #Based on Cangjie6, merge with pinyin_lookup, since there is only one reverse lookup
+stroke_lookup: # Based on Cangjie6, merge with pinyin_lookup, since there is only one reverse lookup
   tag: stroke_lookup
   prefix: "`S"
   suffix: ;
   tips: 【五笔画反查】
   closing_tips: 【五笔】
-  dictionary: stroke #Based on wubi86 reverse lookup, so that will have simplified and traditional characters
+  dictionary: stroke # Based on wubi86 reverse lookup, so that will have simplified and traditional characters
   preedit_format:
     - xlit/hspnz/一丨丿丶乙/
   comment_format:
@@ -163,25 +174,25 @@ stroke_lookup: #Based on Cangjie6, merge with pinyin_lookup, since there is only
     - xlit/hspnz/一丨丿丶乙/
   initial_quality: 1
 
-stroke_reverse_lookup: #will show the wubi when typing the stroke
+stroke_reverse_lookup: # will show the wubi when typing the stroke
   tags: [ stroke_lookup ]
   dictionary: *dict
   overwrite_comment: true
 
-punctuator: #based on Cangjie6
+punctuator: # based on Cangjie6
   import_preset: symbols
 
-key_binder: #based on luna_pinyin_simp
+key_binder: # based on luna_pinyin_simp
   import_preset: default
   bindings:
     - { when: always, accept: Control+Shift+4, toggle: zh_simp }
     - { when: always, accept: Control+Shift+dollar, toggle: zh_simp }
 
-recognizer: #based on Cangjie6
+recognizer: # based on Cangjie6
   import_preset: default
   patterns:
-    reverse_lookup: "`[a-z]*;?$" #pinyin to wubi
-    pinyin_lookup: "`W[a-z]*;?$" #wubi to pinyin
-    stroke_lookup: "`S[hspnz]*;?$" #stroke to wubi
-    pinyin: "~[a-z']*;?$" #cannot use number to select the phrase, have to use cursor
+    reverse_lookup: "`[a-z]*;?$" # pinyin to wubi
+    pinyin_lookup: "`W[a-z]*;?$" # wubi to pinyin
+    stroke_lookup: "`S[hspnz]*;?$" # stroke to wubi
+    pinyin: "~[a-z']*;?$" # cannot use number to select the phrase, have to use cursor
     punct: "^/[a-z]*$"
