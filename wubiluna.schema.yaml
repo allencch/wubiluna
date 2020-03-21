@@ -4,7 +4,7 @@
 schema:
   schema_id: wubiluna
   name: "五笔朙月"
-  version: "5"
+  version: "6"
   author:
     - Allen Choong
   description: |
@@ -14,7 +14,6 @@ schema:
     - terra_pinyin
     - wubi86
     - stroke
-    - emoji
 
 switches:
   - name: ascii_mode
