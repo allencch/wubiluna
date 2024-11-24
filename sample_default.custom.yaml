@@ -1,0 +1,10 @@
+patch:
+  schema_list:
+    - schema: wubiluna
+    # - schema: emoji
+    - schema: bopomofo
+    - schema: luna_pinyin
+    - schema: terra_pinyin
+    - schema: wubi86
+    - schema: stroke
+
