@@ -24,7 +24,7 @@ switches:
   - name: ascii_punct
     states: [ 。， ,  ．， ]
   - options: [ zh_simp, zh_tw, zh_trad ]
-    # reset: 0 # Disable so that not reset to SC
+    reset: 0
     states:
       - 字型 → 汉字
       - 字型 → 漢字（臺）
