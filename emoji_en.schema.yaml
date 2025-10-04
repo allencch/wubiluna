@@ -1,0 +1,67 @@
+# Rime schema settings
+# encoding: utf-8
+
+schema:
+  schema_id: emoji_en
+  name: "绘文字 en"
+  version: "1"
+  author:
+    - Allen Choong
+  description: |
+    以英文输入为主的绘文字
+
+switches:
+  - name: ascii_mode
+    reset: 0
+    states: [ 绘文字, 西文 ]
+
+engine:
+  processors:
+    - ascii_composer
+    - recognizer
+    - key_binder
+    - speller
+    - selector
+    - navigator
+    - express_editor
+  segmentors:
+    - ascii_segmentor
+    - matcher
+    - abc_segmentor
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+    - table_translator
+  filters:
+    - uniquifier
+
+# 翻译器配置
+translator:
+  dictionary: emoji_en
+  enable_completion: true   # 输入部分编码也能提示候选
+  enable_sentence: false
+
+# 提示编码输入的样式
+speller:
+  delimiter: " "            # 空格分隔多编码
+  algebra:
+    - "xform/;/ /"          # 可把分号 ; 也映射为空格（可选）
+
+# 输入过程中的格式美化
+preedit_format:
+  - "xform/^([a-z]+)/[$1]/"   # 在输入时给编码加上中括号
+  - "xform/([0-9])/{$1}/"     # 数字用花括号包裹
+
+# 候选的注释部分美化（可选）
+comment_format:
+  - "xform/^/ /"              # 在注释前加一个空格，防止紧贴
+
+# 按键绑定（可选）
+key_binder:
+  bindings:
+    - { when: composing, accept: space, send: "commit" }
+
+# 识别器（可配置触发规则）
+recognizer:
+  patterns:
+    punct: "^/[a-z]*$"
