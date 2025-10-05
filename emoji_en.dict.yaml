@@ -6,90 +6,84 @@ use_preset_vocabulary: false
 
 ...
 # Smileys
-😊	blush
-😂	joy
-😃	smiley
 😀	grinning
+😃	smiley
 😄	smile
 😆	laughing
 😅	sweat_smile
+😂	joy
+😊	blush
 😍	heart_eyes
 😗	kissing
 😋	yum
+🤔	thinking
 😑	expressionless
 😏	smirk
 😒	unamused
-😎	sunglasses
-🤔	thinking
-😕	confused
-😮	open_mouth
-😢	cry
-😟	worried
-😭	sob
-😩	weary
-😤	triumph
+😪	sleepy
 😵	dizzy_face
 🤯	exploding_head
-😪	sleepy
+😎	sunglasses
+😕	confused
+😟	worried
+😮	open_mouth
 😲	astonished
+😢	cry
+😭	sob
 😱	scream
+😩	weary
+😤	triumph
 😠	angry
-😿	crying_cat
-😾	pouting_cat
-🤖	robot
-👻	ghost
-👽️	alien
 💀	skull
 ☠️	skull_and_crossbones
+👻	ghost
+👽️	alien
+🤖	robot
+😿	crying_cat
+😾	pouting_cat
 
-# People
-👀	eyes
+💌	love_letter
+💖	sparkling_heart
+💗	growing_heart
+💕	two_hearts
+❤️	heart
 💯	hundred_points
 💢	anger
-💤	zzz
-❤️	heart
-💕	two_hearts
-💗	growing_heart
-💖	sparkling_heart
-💌	love_letter
 💦	sweat_drops
 💬	speech_balloon
+💤	zzz
 
-👍	thumbs_up
-👎️	thumbs_down
-✌️	victory_hand
-👌	ok_hand
-🤝	handshake
 👋	wave
 🫳	palm_down
 🫴	palm_up
-💪	muscle
+👌	ok_hand
+✌️	victory_hand
+👍	thumbs_up
+👎️	thumbs_down
 🫶	heart_hands
+🤝	handshake
 🙏	pray
 ✍️	writing_hand
-
-🫂	people_hugging
-
+💪	muscle
 🧠	brain
 🫀	anatomical_heart
 🫁	lungs
 🦴	bone
+👀	eyes
 
+# People
+👶	baby
+👦	boy
+👧	girl
+👨	man
+👩	woman
+👴	old_man
+👵	old_woman
+🙅	no_good
+🙆	all_good
 🙇	bow
 🤦	facepalm
 🤷	shrug
-🙅	no_good
-🙆	all_good
-
-👪️	family
-👶	baby
-👴	old_man
-👵	old_woman
-👨	man
-👩	woman
-👦	boy
-👧	girl
-
 👨‍🎓	student
 👨‍🏫	teacher
 👨‍⚖️	judge
@@ -112,40 +106,50 @@ use_preset_vocabulary: false
 🦸	superhero
 🧙	mage
 🏊️	swimmer
+🫂	people_hugging
+👪️	family
 
 
 # Animals
-🐭	mouse_face
-🐰	rabbit_face
+🐵	monkey
 🐒	monkey
-🐓	rooster
-🐕	dog
-🐖	pig
-🐁	mouse
-🐄	cow
-🐅	tiger
-🐇	rabbit
-🐈	cat
-🐻	bear
-🐘	elephant
-🐞	ladybug
-🦅	eagle
-🦌	deer
+🦧	orangutan
 🐶	dog_face
+🐕	dog
 🐱	cat_face
+🐈	cat
+🦁	lion
+🐯	tiger_face
+🐅	tiger
+🐎	horse
+🦌	deer
 🐮	cow_face
+🐄	cow
 🐷	pig_face
+🐖	pig
 🐑	sheep
-🕊️	dove
-🐔	chicken
-🦆	duck
+🐘	elephant
+🐭	mouse_face
+🐁	mouse
+🐰	rabbit_face
+🐇	rabbit
+🐻	bear
 🦃	turkey
+🐔	chicken
+🐓	rooster
+🐧	penguin
+🕊️	dove
+🦅	eagle
+🦆	duck
+🪶	feather
+🪽	wing
 🪿	goose
 🐸	frog
 🐢	turtle
 🦎	lizard
 🐍	snake
 🐉	dragon
+🐳	whale
 🐟️	fish
 🐙	octopus
 🦀	crab
@@ -153,57 +157,49 @@ use_preset_vocabulary: false
 🦐	shrimp
 🦑	squid
 🦪	oyster
-🐝	bee
 🐛	bug
-🐧	penguin
-🐳	whale
-🐵	monkey
-🦧	orangutan
-🦁	lion
-🐯	tiger_face
-🐎	horse
+🐝	bee
+🐞	ladybug
 🕸️	spider_web
-🪶	feather
-🪽	wing
 
 # Plants
+🌸	cherry_blossom
+🌹	rose
+🌺	hibiscus
+🌻	sunflower
 🌲	evergreen_tree
 🌴	palm_tree
 🌵	cactus
-🌸	cherry_blossom
-🌻	sunflower
-🌹	rose
-🌺	hibiscus
-🍄	mushroom
 🌾	ear_of_rice
 🌿	herb
 🍀	four_leaf_clover
-
+🍄	mushroom
 
 # Fruits
-🍎	apple
-🍌	banana
 🍇	grapes
 🍈	melon
-🍓	strawberry
 🍉	watermelon
-🍍	pineapple
-🥑	avocado
 🍊	tangerine
 🍋	lemon
+🍌	banana
+🍍	pineapple
 🥭	mango
+🍎	apple
 🍐	pear
 🍑	peach
 🍒	cherries
+🍓	strawberry
 🫐	blueberries
 🥝	kiwi
 🍅	tomato
 🥥	coconut
+🥑	avocado
+
 
 # Vegetables
 🍆	eggplant
-🥕	carrot
 🥔	potato
+🥕	carrot
 🌽	corn
 🌶️	hot_pepper
 🫑	bell_pepper
@@ -217,16 +213,6 @@ use_preset_vocabulary: false
 🫚	ginger_root
 
 # Food
-🍕	pizza
-🍔	hamburger
-🍟	fries
-🍙	onigiri
-🍚	rice
-🍜	ramen
-🍣	sushi
-🍫	chocolate
-🥪	sandwich
-🍛	curry
 🍞	bread
 🥐	croissant
 🥨	pretzel
@@ -236,7 +222,11 @@ use_preset_vocabulary: false
 🍖	meat_on_bone
 🍗	poultry_leg
 🥓	bacon
+🍔	hamburger
+🍟	fries
+🍕	pizza
 🌭	hotdog
+🥪	sandwich
 🥚	egg
 🍳	fried_egg
 🥗	green_salad
@@ -245,7 +235,12 @@ use_preset_vocabulary: false
 🧂	salt
 🥫	canned_food
 🍱	bento
+🍙	onigiri
+🍚	rice
+🍛	curry
+🍜	ramen
 🍝	spaghetti
+🍣	sushi
 🍤	fried_shrimp
 🥮	moon_cake
 🥟	dumpling
@@ -256,6 +251,7 @@ use_preset_vocabulary: false
 🍰	cake
 🧁	cupcake
 🥧	pie
+🍫	chocolate
 🍮	custard
 🍯	honey_pot
 
@@ -265,61 +261,58 @@ use_preset_vocabulary: false
 ☕	coffee
 🫖	teapot
 🍵	tea
-🍺	beer
-🍷	wine
 🍶	sake
 🍾	champagne
+🍷	wine
 🍹	tropical_drink
+🍺	beer
+
+# Utensils
 🥤	cup_with_straw
 🧋	bubble_tea
 🧃	beverage_box
-
-# Utensils
 🥢	chopsticks
+🍽️	fork_knife_plate
 🍴	fork_and_knife
 🥄	spoon
 🔪	knife
-🍽️	fork_knife_plate
 🫙	jar
 
-# Places
+# Places and travels
+🌍	earth
 🗺️	world_map
 🧭	compass
 ⛰️	mountain
+🏟️	stadium
+🏛️	classical_building
 🏗️	building_construction
 🧱	brick
 🪨	rock
 🪵	wood
 🏠	house
-🏥	hospital
-🏫	school
-⛪️	church
-🏛️	classical_building
-🏟️	stadium
 🏢	office
 🏤	post_office
+🏥	hospital
 🏦	bank
 🏨	hotel
 🏪	convenience_store
-
+🏫	school
+⛪️	church
 🌅	sunrise
 🌇	sunset
 ♨️	hotsprings
-💈	barber
 🛝	playground_slide
-
-
-# Travel
+💈	barber
 🚅	bullet_train
 🚆	train
 🚌	bus
-🚗	car
 🚑️	ambulance
 🚒	fire_engine
 🚓	police_car
 🚕	taxi
-🚚	truck
+🚗	car
 🛻	pickup_truck
+🚚	truck
 🏍️	motorcycle
 🛵	motor_scooter
 🚲️	bicycle
@@ -341,35 +334,35 @@ use_preset_vocabulary: false
 🚀	rocket
 🧳	luggage
 
+
 # Time, weather
 ⌛️	hourglass
 ⌚️	watch
-⏱️	stopwatch
 ⏰️	alarm_clock
+⏱️	stopwatch
+🌑	new_moon
+🌔	moon
+🌕️	full_moon
+🌙	crescent_moon
 🌡️	thermometer
+☀️	sun
 ⭐️	star
 🌟	glowing_star
 🌠	stars
-🌍	earth
-🌙	crescent_moon
-🌕️	full_moon
-🌔	moon
-🌑	new_moon
-☀️	sun
 ☁️	cloud
-🌤️	sunny
 ⛈️	stormy
+🌤️	sunny
 🌥️	cloudy
 🌧️	rainy
 🌨️	snowy
 🌩️	lightning
 🌈	rainbow
+☂️	umbrella
 ⚡️	zap
 ❄️	snowflake
 ☄️	comet
 🔥	fire
 💧	water
-☂️	umbrella
 🎄	christmas_tree
 🎆	fireworks
 🧨	firecracker
@@ -380,12 +373,10 @@ use_preset_vocabulary: false
 🎁	gift
 
 
-# Others
+# Activities & Objects
 🎫	ticket
 🎖️	medal
 🏆️	trophy
-
-# Activities & Objects
 ⚽	soccer
 🏀	basketball
 🏓	ping_pong
@@ -408,23 +399,21 @@ use_preset_vocabulary: false
 🃏	joker
 🀄️	mahjong
 🎴	flower_playing_cards
-
+🎨	art
 🧵	thread
 🪡	sewing_needle
 🧶	yarn
 🪢	knot
-🎨	art
+
 👓️	glasses
 🕶️	sunglasses
-🎓️	mortar_board
-
+👛	purse
 🎒	backpack
-💄	lipstick
+🎓️	mortar_board
 📿	prayer_beads
+💄	lipstick
 💍	ring
 💎	gem
-👛	purse
-
 
 # Music
 🔇	mute
@@ -438,8 +427,8 @@ use_preset_vocabulary: false
 🎤	microphone
 🎧️	headphone
 📻️	radio
-🎸	guitar
 🪗	accordion
+🎸	guitar
 🎹	musical_keyboard
 
 
@@ -453,8 +442,8 @@ use_preset_vocabulary: false
 💻	laptop
 🖥️	desktop_computer
 🖨️	printer
-🖱️	computer_mouse
 ⌨️	keyboard
+🖱️	computer_mouse
 💾	floppy_disk
 💿️	cd
 📀	dvd
@@ -463,20 +452,22 @@ use_preset_vocabulary: false
 📷	camera
 📼	videocassette
 
+
+# Others
 🔍️	mag
 🕯️	candle
 💡	light_bulb
 🔦	flashlight
-📖	book
 📕	closed_book
+📖	book
 📓	notebook
 📒	ledger
 📜	scroll
 📰	newspaper
 🔖	bookmark
 🏷️	label
-💰	moneybag
 🪙	coin
+💰	moneybag
 💵	dollar
 💳	credit_card
 🧾	receipt
@@ -484,14 +475,12 @@ use_preset_vocabulary: false
 📧	email
 📨	incoming_envelope
 📦️	package
-
 ✏️	pencil
 ✒️	black_nib
 🖊️	pen
 🖌️	paintbrush
 🖍️	crayon
 📝	memo
-
 💼	briefcase
 📁	file_folder
 📅	calendar
@@ -532,55 +521,53 @@ use_preset_vocabulary: false
 🔬	microscope
 🔭	telescope
 📡	satellite_antenna
-
 💉	syringe
 🩸	drop_of_blood
 💊	pill
 🩹	adhesive_bandage
 🩺	stethoscope
-
 🚪	door
 🛗	elevator
 🪟	window
 🪑	chair
 🚽	toilet
+🧹	broom
 🪣	bucket
 🫧	bubbles
 🪥	toothbrush
-🧹	broom
 🧯	fire_extinguisher
 🛒	shopping_cart
-🪪	id_card
 ⚰️	coffin
 🪦	headstone
+🪪	id_card
+
+# Symbols
+🚻	restroom
 ⚠️	warning
 ⛔️	no_entry
 🚫	prohibited
 🔞	underage
-🚻	restroom
-
 ⬆️	arrow_up
-➡️	arrow_right
-⬇️	arrow_down
-⬅️	arrow_left
 ↗️	arrow_upper_right
+➡️	arrow_right
 ↘️	arrow_lower_right
+⬇️	arrow_down
 ↙️	arrow_lower_left
+⬅️	arrow_left
 ↖️	arrow_upper_left
 ↪️	arrow_right_hook
 ⤴️	arrow_heading_up
 ⤵️	arrow_heading_down
 🔄	arrows_counterclockwise
-
 🛐	place_of_worship
 ✝️	latin_cross
+⏏️	eject
 🛜	wireless
 ♀️	female
 ♂️	male
-
+‼️	bangbang
 ❓	question
 ❗	exclamation
-‼️	bangbang
 ♻️	recycle
 ✅️	white_check_mark
 ✔️	check_mark
@@ -589,15 +576,12 @@ use_preset_vocabulary: false
 🅰️	a_blood
 🆎	ab_blood
 🅱️	b_blood
-🅾️	o_blood
-
-⏏️	eject
-
-🆗	ok
-🆕	new
 🆓	free
-🆔	id
 ℹ️	info
+🆔	id
+🆕	new
+🅾️	o_blood
+🆗	ok
 🆘	sos
 🆚	vs
 🈷️	yue
@@ -607,12 +591,10 @@ use_preset_vocabulary: false
 🈚️	wu
 🈲	jin
 🉑	ke
+🈳	kong
 ㊗️	zhu
 ㊙️	mi
 🈺	ying
 🈵	man
-🈳	kong
-
-
 🏁	checkered_flag
 🚩	triangular_flag
