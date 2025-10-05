@@ -37,41 +37,115 @@ use_preset_vocabulary: false
 😿	crying_cat
 😾	pouting_cat
 🤖	robot
+👻	ghost
+👽️	alien
+💀	skull
+☠️	skull_and_crossbones
 
 # People
-👍	thumbs_up
-👎️	thumbs_down
-✌️	victory_hand
-🤝	handshake
-💪	muscle
-🙏	pray
-✍️	writing_hand
-
-👷	construction_worker
-👶	baby
-👮	police_officer
-👨‍🚒	firefighter
-🏊️	swimmer
-
 👀	eyes
 💯	hundred_points
 💢	anger
 💤	zzz
 ❤️	heart
+💕	two_hearts
+💗	growing_heart
+💖	sparkling_heart
+💌	love_letter
 💦	sweat_drops
 💬	speech_balloon
+
+👍	thumbs_up
+👎️	thumbs_down
+✌️	victory_hand
+👌	ok_hand
+🤝	handshake
+👋	wave
+🫳	palm_down
+🫴	palm_up
+💪	muscle
+🫶	heart_hands
+🙏	pray
+✍️	writing_hand
+
+🫂	people_hugging
+
 🧠	brain
+🫀	anatomical_heart
+🫁	lungs
+🦴	bone
+
+🙇	bow
+🤦	facepalm
+🤷	shrug
+🙅	no_good
+🙆	all_good
+
+👪️	family
+👶	baby
+👴	old_man
+👵	old_woman
+👨	man
+👩	woman
+👦	boy
+👧	girl
+
+👨‍🎓	student
+👨‍🏫	teacher
+👨‍⚖️	judge
+👨‍🌾	farmer
+👨‍🍳	cook
+👨‍🔧	mechanic
+👨‍💼	office_worker
+👨‍🔬	scientist
+👨‍💻	technologist
+👨‍🎨	artist
+👨‍✈️	pilot
+👨‍🚒	firefighter
+👮	police_officer
+🕵️	detective
+💂	guard
+🥷	ninja
+👷	construction_worker
+🤰	pregnant_woman
+🤱	breast_feeding
+🦸	superhero
+🧙	mage
+🏊️	swimmer
+
 
 # Animals
-🐶	dog
-🐱	cat
-🐮	cow
-🐷	pig
+🐭	mouse_face
+🐰	rabbit_face
+🐒	monkey
+🐓	rooster
+🐕	dog
+🐖	pig
+🐁	mouse
+🐄	cow
+🐅	tiger
+🐇	rabbit
+🐈	cat
+🐻	bear
+🐘	elephant
+🐞	ladybug
+🦅	eagle
+🦌	deer
+🐶	dog_face
+🐱	cat_face
+🐮	cow_face
+🐷	pig_face
 🐑	sheep
+🕊️	dove
 🐔	chicken
 🦆	duck
 🦃	turkey
+🪿	goose
 🐸	frog
+🐢	turtle
+🦎	lizard
+🐍	snake
+🐉	dragon
 🐟️	fish
 🐙	octopus
 🦀	crab
@@ -81,6 +155,16 @@ use_preset_vocabulary: false
 🦪	oyster
 🐝	bee
 🐛	bug
+🐧	penguin
+🐳	whale
+🐵	monkey
+🦧	orangutan
+🦁	lion
+🐯	tiger_face
+🐎	horse
+🕸️	spider_web
+🪶	feather
+🪽	wing
 
 # Plants
 🌲	evergreen_tree
@@ -190,14 +274,22 @@ use_preset_vocabulary: false
 🧋	bubble_tea
 🧃	beverage_box
 
-
 # Utensils
 🥢	chopsticks
 🍴	fork_and_knife
 🥄	spoon
 🔪	knife
+🍽️	fork_knife_plate
+🫙	jar
 
 # Places
+🗺️	world_map
+🧭	compass
+⛰️	mountain
+🏗️	building_construction
+🧱	brick
+🪨	rock
+🪵	wood
 🏠	house
 🏥	hospital
 🏫	school
@@ -210,7 +302,6 @@ use_preset_vocabulary: false
 🏨	hotel
 🏪	convenience_store
 
-🗺️	world_map
 🌅	sunrise
 🌇	sunset
 ♨️	hotsprings
@@ -251,20 +342,31 @@ use_preset_vocabulary: false
 🧳	luggage
 
 # Time, weather
+⌛️	hourglass
 ⌚️	watch
+⏱️	stopwatch
 ⏰️	alarm_clock
+🌡️	thermometer
 ⭐️	star
 🌟	glowing_star
 🌠	stars
 🌍	earth
-🌙	moon
+🌙	crescent_moon
+🌕️	full_moon
+🌔	moon
+🌑	new_moon
 ☀️	sun
 ☁️	cloud
-🌧️	rain_cloud
+🌤️	sunny
+⛈️	stormy
+🌥️	cloudy
+🌧️	rainy
+🌨️	snowy
 🌩️	lightning
 🌈	rainbow
 ⚡️	zap
 ❄️	snowflake
+☄️	comet
 🔥	fire
 💧	water
 ☂️	umbrella
@@ -283,7 +385,6 @@ use_preset_vocabulary: false
 🎖️	medal
 🏆️	trophy
 
-
 # Activities & Objects
 ⚽	soccer
 🏀	basketball
@@ -295,6 +396,7 @@ use_preset_vocabulary: false
 🪀	yo_yo
 🪁	kite
 🔫	water_pistol
+🪄	magic_wand
 🎮️	video_game
 🕹️	joystick
 🎲	game_die
@@ -305,29 +407,39 @@ use_preset_vocabulary: false
 ♣️	club_suit
 🃏	joker
 🀄️	mahjong
+🎴	flower_playing_cards
 
 🧵	thread
+🪡	sewing_needle
+🧶	yarn
+🪢	knot
 🎨	art
 👓️	glasses
 🕶️	sunglasses
+🎓️	mortar_board
 
 🎒	backpack
+💄	lipstick
 📿	prayer_beads
 💍	ring
 💎	gem
+👛	purse
 
 
 # Music
 🔇	mute
 🔉	sound
+📢	loudspeaker
 📣	mega
 🔔	bell
 🎼	musical_score
 🎵	musical_note
+🎶	notes
 🎤	microphone
 🎧️	headphone
 📻️	radio
 🎸	guitar
+🪗	accordion
 🎹	musical_keyboard
 
 
@@ -345,6 +457,7 @@ use_preset_vocabulary: false
 ⌨️	keyboard
 💾	floppy_disk
 💿️	cd
+📀	dvd
 🎥	movie_camera
 🎞️	film_frames
 📷	camera
@@ -357,6 +470,7 @@ use_preset_vocabulary: false
 📖	book
 📕	closed_book
 📓	notebook
+📒	ledger
 📜	scroll
 📰	newspaper
 🔖	bookmark
@@ -387,6 +501,8 @@ use_preset_vocabulary: false
 📎	paperclip
 📏	straight_ruler
 ✂️	scissors
+🗃️	card_file_box
+🗄️	file_cabinet
 🗑️	wastebasket
 🔒️	lock
 🔓️	unlock
@@ -404,7 +520,9 @@ use_preset_vocabulary: false
 🔧	wrench
 🪛	screwdriver
 ⚙️	gear
+🗜️	clamp
 🔗	link
+⛓️	chains
 🪝	hook
 🧰	toolbox
 🧲	magnet
@@ -413,7 +531,7 @@ use_preset_vocabulary: false
 🧬	dna
 🔬	microscope
 🔭	telescope
-
+📡	satellite_antenna
 
 💉	syringe
 🩸	drop_of_blood
@@ -426,20 +544,35 @@ use_preset_vocabulary: false
 🪟	window
 🪑	chair
 🚽	toilet
+🪣	bucket
+🫧	bubbles
+🪥	toothbrush
 🧹	broom
 🧯	fire_extinguisher
 🛒	shopping_cart
+🪪	id_card
 ⚰️	coffin
 🪦	headstone
 ⚠️	warning
 ⛔️	no_entry
 🚫	prohibited
+🔞	underage
+🚻	restroom
 
 ⬆️	arrow_up
 ➡️	arrow_right
 ⬇️	arrow_down
 ⬅️	arrow_left
+↗️	arrow_upper_right
+↘️	arrow_lower_right
+↙️	arrow_lower_left
+↖️	arrow_upper_left
+↪️	arrow_right_hook
+⤴️	arrow_heading_up
+⤵️	arrow_heading_down
+🔄	arrows_counterclockwise
 
+🛐	place_of_worship
 ✝️	latin_cross
 🛜	wireless
 ♀️	female
@@ -448,14 +581,25 @@ use_preset_vocabulary: false
 ❓	question
 ❗	exclamation
 ‼️	bangbang
+♻️	recycle
+✅️	white_check_mark
 ✔️	check_mark
 ❌️	cross_mark
+❎️	cross_mark_button
 🅰️	a_blood
 🆎	ab_blood
 🅱️	b_blood
 🅾️	o_blood
 
+⏏️	eject
+
 🆗	ok
+🆕	new
+🆓	free
+🆔	id
+ℹ️	info
+🆘	sos
+🆚	vs
 🈷️	yue
 🈶	you
 🉐	de
